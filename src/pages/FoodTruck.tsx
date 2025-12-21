@@ -11,6 +11,7 @@ import ImageSlider from "@/components/ImageSlider";
 import foodTruck from "@/assets/food-truck.jpg";
 import heroTacos from "@/assets/hero-tacos.jpg";
 import catering from "@/assets/catering.jpg";
+import { foodTruckMenu } from "@/data/menuData";
 
 const locations = [
   { day: "Monday", location: "Downtown - Stephen Avenue", time: "11:00 AM - 3:00 PM" },
@@ -21,10 +22,11 @@ const locations = [
   { day: "Saturday", location: "Calgary Farmers' Market", time: "10:00 AM - 6:00 PM" },
 ];
 
+// Get highlights from food truck menu
 const menuHighlights = [
-  { name: "Tacos (3)", price: "$17.85", description: "Corn or flour tortillas with your favorite filling" },
+  { name: "3 Tacos", price: "$17.85", description: "Corn or flour tortillas with your favorite filling" },
+  { name: "Quesa-Birria", price: "$19.95", description: "3 fried tortillas with cheese, birria and consomé" },
   { name: "Burrito", price: "$16.80", description: "Large and flavorful with rice, beans and protein" },
-  { name: "Quesabirria", price: "$19.95", description: "3 fried tortillas with cheese, birria and consomé" },
   { name: "Nachos", price: "$18.90", description: "Chips with beans, protein, melted cheese and pico de gallo" },
 ];
 
@@ -33,6 +35,11 @@ const menuImages = [heroTacos, foodTruck, catering];
 
 const FoodTruck = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
+  const filteredCategories = selectedCategory === "all"
+    ? foodTruckMenu
+    : foodTruckMenu.filter((cat) => cat.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,8 +89,106 @@ const FoodTruck = () => {
         </div>
       </section>
 
+      {/* Food Truck Menu */}
+      <section className="py-12 md:py-20 bg-corn-light">
+        <div className="container-custom">
+          <div className="text-center mb-8 md:mb-12">
+            <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+              Our Menu
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl text-foreground mt-2 mb-4">
+              🚚 Food Truck Menu
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Quick, delicious, and authentic Mexican street food
+            </p>
+          </div>
+
+          {/* Category Filter */}
+          <div className="mb-8 md:mb-12 overflow-x-auto scrollbar-hide">
+            <div className="flex gap-2 md:gap-3 pb-2 min-w-max justify-center flex-wrap">
+              <button
+                onClick={() => setSelectedCategory("all")}
+                className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-sm md:text-base font-medium transition-all whitespace-nowrap ${
+                  selectedCategory === "all"
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "bg-card text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                }`}
+              >
+                All
+              </button>
+              {foodTruckMenu.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 md:px-5 md:py-2.5 rounded-full text-sm md:text-base font-medium transition-all whitespace-nowrap ${
+                    selectedCategory === category.id
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "bg-card text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Menu Items */}
+          {filteredCategories.map((category, catIndex) => (
+            <div key={category.id} className="mb-10 md:mb-14 last:mb-0">
+              <div className="text-center mb-6 md:mb-8">
+                <h3 className="font-display text-2xl md:text-3xl text-foreground mb-1">
+                  {category.name}
+                </h3>
+                <p className="text-muted-foreground text-sm">{category.description}</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+                {category.items.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-card transition-all hover:-translate-y-1 group"
+                  >
+                    <div className="relative h-36 md:h-44 overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      {item.price && (
+                        <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full font-display text-lg shadow-lg">
+                          {item.price}
+                        </div>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h4 className="font-semibold text-base md:text-lg text-foreground mb-1">{item.name}</h4>
+                      <p className="text-muted-foreground text-xs md:text-sm line-clamp-2">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {catIndex < filteredCategories.length - 1 && (
+                <div className="mt-10 flex justify-center">
+                  <div className="w-20 h-1 bg-secondary rounded-full" />
+                </div>
+              )}
+            </div>
+          ))}
+
+          <div className="mt-8 text-center">
+            <Link to="/menu">
+              <Button variant="default" size="lg">
+                View Full Restaurant Menu
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Locations */}
-      <section id="locations" className="py-12 md:py-20 bg-corn-light">
+      <section id="locations" className="py-12 md:py-20 bg-background">
         <div className="container-custom">
           <div className="text-center mb-10 md:mb-14">
             <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
@@ -129,51 +234,6 @@ const FoodTruck = () => {
               <span className="text-foreground font-medium text-sm md:text-base">
                 Also available for private events
               </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Menu Highlights */}
-      <section className="py-12 md:py-20 bg-background">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
-                Food Truck Menu
-              </span>
-              <h2 className="font-display text-3xl md:text-5xl text-foreground mt-2 mb-4 md:mb-6">
-                Street Favorites
-              </h2>
-              <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base">
-                Our food truck menu is designed for fast service without compromising flavor. 
-                Every dish is prepared fresh with quality ingredients.
-              </p>
-
-              <div className="space-y-3 md:space-y-4">
-                {menuHighlights.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-card rounded-xl p-4 md:p-5 flex justify-between items-start shadow-sm"
-                  >
-                    <div>
-                      <h4 className="font-semibold text-foreground text-base md:text-lg">{item.name}</h4>
-                      <p className="text-muted-foreground text-xs md:text-sm">{item.description}</p>
-                    </div>
-                    <span className="font-display text-xl md:text-2xl text-primary">{item.price}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link to="/menu" className="inline-block mt-6 md:mt-8">
-                <Button variant="default" size="lg">
-                  View Full Menu
-                </Button>
-              </Link>
-            </div>
-
-            <div className="relative order-1 lg:order-2">
-              <ImageSlider images={menuImages} alt="Food truck menu items" />
             </div>
           </div>
         </div>
