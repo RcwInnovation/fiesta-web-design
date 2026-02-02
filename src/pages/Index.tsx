@@ -8,8 +8,10 @@ import ServiceCard from "@/components/ServiceCard";
 import ReservationForm from "@/components/ReservationForm";
 import ReservationModal from "@/components/ReservationModal";
 import ImageSlider from "@/components/ImageSlider";
-import restaurant from "@/assets/restaurant.jpg";
-import foodTruck from "@/assets/food-truck.jpg";
+import restaurant1 from "@/assets/restaurant-1.jpg";
+import restaurant2 from "@/assets/restaurant-2.jpg";
+import foodTruck1 from "@/assets/food-truck-1.jpg";
+import foodTruck2 from "@/assets/food-truck-2.jpg";
 import catering from "@/assets/catering.jpg";
 import heroTacos from "@/assets/hero-tacos.jpg";
 
@@ -57,7 +59,7 @@ const testimonials = [
   },
 ];
 
-const featuredImages = [heroTacos, restaurant, catering];
+const featuredImages = [heroTacos, restaurant1, foodTruck1];
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -86,14 +88,14 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <ServiceCard
-              image={restaurant}
+              image={restaurant1}
               title="Restaurant"
               description="Experience authentic Mexican dining in our cozy family-friendly restaurant."
               link="/restaurant"
               cta="Book a Table"
             />
             <ServiceCard
-              image={foodTruck}
+              image={foodTruck1}
               title="Food Truck"
               description="Find our colorful food truck at events and locations throughout Calgary."
               link="/food-truck"
@@ -250,7 +252,7 @@ const Index = () => {
                     <MapPin className="text-primary" size={20} />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground text-sm md:text-base">Downtown Calgary Location</p>
+                    <p className="font-semibold text-foreground text-sm md:text-base">3231 17 Ave SE, Calgary</p>
                     <p className="text-muted-foreground text-xs md:text-sm">Easy access and parking available</p>
                   </div>
                 </div>

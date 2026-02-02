@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ReservationForm from "@/components/ReservationForm";
-import restaurant from "@/assets/restaurant.jpg";
+import restaurant1 from "@/assets/restaurant-1.jpg";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -18,7 +18,7 @@ const Contact = () => {
       <section className="relative h-[35vh] md:h-[40vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${restaurant})` }}
+          style={{ backgroundImage: `url(${restaurant1})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container-custom relative z-10 text-center">
@@ -49,8 +49,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground text-base md:text-lg mb-1">Address</h3>
                     <p className="text-muted-foreground text-sm md:text-base">
-                      123 Stephen Avenue SW<br />
-                      Calgary, AB T2P 1G8<br />
+                      3231 17 Ave SE<br />
+                      Calgary, AB T2A 0P9<br />
                       Canada
                     </p>
                   </div>
@@ -62,8 +62,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground text-base md:text-lg mb-1">Phone</h3>
-                    <a href="tel:+14034019412" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">
-                      +1 (403) 401-9412
+                    <a href="tel:+14032488888" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">
+                      (403) 248-2888
                     </a>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ const Contact = () => {
               {/* Map */}
               <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-card h-48 md:h-64 bg-muted">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.4144882391384!2d-114.0692684!3d51.0468672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fe9e248fe45%3A0x8e6c0a25da0b3b3a!2sStephen%20Avenue%20Walk!5e0!3m2!1sen!2sca!4v1702500000000!5m2!1sen!2sca"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.9!2d-113.9956!3d51.0373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3231%2017%20Ave%20SE%2C%20Calgary%2C%20AB%20T2A%200P9!5e0!3m2!1sen!2sca!4v1702500000000!5m2!1sen!2sca"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

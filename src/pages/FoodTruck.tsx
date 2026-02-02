@@ -8,9 +8,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ReservationForm from "@/components/ReservationForm";
 import ReservationModal from "@/components/ReservationModal";
 import ImageSlider from "@/components/ImageSlider";
-import foodTruck from "@/assets/food-truck.jpg";
+import foodTruck1 from "@/assets/food-truck-1.jpg";
+import foodTruck2 from "@/assets/food-truck-2.jpg";
 import heroTacos from "@/assets/hero-tacos.jpg";
-import catering from "@/assets/catering.jpg";
 import { foodTruckMenu } from "@/data/menuData";
 
 const locations = [
@@ -30,8 +30,8 @@ const menuHighlights = [
   { name: "Nachos", price: "$18.90", description: "Chips with beans, protein, melted cheese and pico de gallo" },
 ];
 
-const foodTruckImages = [foodTruck, heroTacos, catering];
-const menuImages = [heroTacos, foodTruck, catering];
+const foodTruckImages = [foodTruck1, foodTruck2, heroTacos];
+const menuImages = [heroTacos, foodTruck1, foodTruck2];
 
 const FoodTruck = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -49,7 +49,7 @@ const FoodTruck = () => {
       <section className="relative h-[60vh] md:h-[70vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${foodTruck})` }}
+          style={{ backgroundImage: `url(${foodTruck1})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container-custom relative z-10">
@@ -85,6 +85,19 @@ const FoodTruck = () => {
           </div>
           <div className="max-w-4xl mx-auto">
             <ImageSlider images={foodTruckImages} alt="Food truck" />
+          </div>
+          
+          {/* Community Link */}
+          <div className="mt-8 text-center">
+            <a 
+              href="https://www.communityfoodtruckgroup.com/the-burrito-mexican-food-truck"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full font-medium hover:bg-primary/20 transition-colors"
+            >
+              <Truck size={20} />
+              Find us on Community Food Truck Group
+            </a>
           </div>
         </div>
       </section>

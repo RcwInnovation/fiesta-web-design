@@ -8,9 +8,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ReservationForm from "@/components/ReservationForm";
 import ReservationModal from "@/components/ReservationModal";
 import ImageSlider from "@/components/ImageSlider";
-import restaurant from "@/assets/restaurant.jpg";
+import restaurant1 from "@/assets/restaurant-1.jpg";
+import restaurant2 from "@/assets/restaurant-2.jpg";
+import restaurant3 from "@/assets/restaurant-3.jpg";
+import restaurant4 from "@/assets/restaurant-4.jpg";
 import heroTacos from "@/assets/hero-tacos.jpg";
-import catering from "@/assets/catering.jpg";
 
 const features = [
   { icon: UtensilsCrossed, title: "Gourmet Menu", description: "Traditional dishes with a contemporary touch" },
@@ -19,8 +21,8 @@ const features = [
   { icon: Wine, title: "Craft Drinks", description: "House margaritas and micheladas" },
 ];
 
-const restaurantImages = [restaurant, heroTacos, catering];
-const dishImages = [heroTacos, restaurant, catering];
+const restaurantImages = [restaurant1, restaurant2, restaurant3];
+const dishImages = [heroTacos, restaurant4, restaurant2];
 
 const Restaurant = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,7 +35,7 @@ const Restaurant = () => {
       <section className="relative h-[60vh] md:h-[70vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${restaurant})` }}
+          style={{ backgroundImage: `url(${restaurant1})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container-custom relative z-10">
@@ -100,16 +102,16 @@ const Restaurant = () => {
                 More Than a Restaurant, A Family
               </h2>
               <p className="text-muted-foreground mb-4 md:mb-6 text-sm md:text-base">
-                Since 2015, we've brought authentic Mexican flavors to Calgary. 
-                Our recipes have been passed down from generation to generation, and every dish 
-                is prepared with the same love and dedication our grandmothers put into their cooking.
+                We are Cinthya and Ulises, originally from Sinaloa and Morelos. Our kitchen reflects our roots.
+                Some of our dishes honor the traditional style of Sinaloa, others represent the essence of Morelos, 
+                and many are born from the fusion of both regions—creating a unique and authentic culinary experience.
               </p>
               <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                 {[
-                  "Fresh ingredients imported from Mexico",
-                  "Chef with over 20 years of experience",
+                  "Homemade-style food with authentic flavors",
+                  "Recipes from Sinaloa and Morelos regions",
                   "Handmade tortillas daily",
-                  "Homemade salsas with authentic chilies",
+                  "Family cooking for families since 2019",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <CheckCircle className="text-accent flex-shrink-0" size={18} />
