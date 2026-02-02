@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroTacos from "@/assets/hero-tacos.jpg";
-import foodTruck from "@/assets/food-truck.jpg";
+import foodTruck1 from "@/assets/food-truck-1.jpg";
+import foodTruck2 from "@/assets/food-truck-2.jpg";
 import catering from "@/assets/catering.jpg";
-import restaurant from "@/assets/restaurant.jpg";
+import restaurant1 from "@/assets/restaurant-1.jpg";
+import restaurant2 from "@/assets/restaurant-2.jpg";
 
 interface Slide {
   image: string;
@@ -18,7 +20,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: restaurant,
+    image: restaurant1,
     title: "Restaurant",
     subtitle: "Authentic Mexican Experience",
     description: "Enjoy the best Mexican food in a cozy atmosphere with exceptional service",
@@ -26,7 +28,7 @@ const slides: Slide[] = [
     link: "/restaurant",
   },
   {
-    image: foodTruck,
+    image: foodTruck1,
     title: "Food Truck",
     subtitle: "Mexican Flavor on the Move",
     description: "We bring the most authentic Mexican flavors directly to your location",
@@ -34,7 +36,7 @@ const slides: Slide[] = [
     link: "/food-truck",
   },
   {
-    image: catering,
+    image: foodTruck2,
     title: "Catering",
     subtitle: "Your Event, Our Flavor",
     description: "We make your celebration a success with our personalized catering service",

@@ -152,31 +152,31 @@ const ReservationForm = ({ serviceType = "restaurant" }: ReservationFormProps) =
           />
         </div>
 
-        <div className="grid grid-cols-3 gap-3 md:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-5">
           <div className="relative">
-            <Calendar className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={14} />
+            <Calendar className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
             <Input
               name="date"
               type="date"
               value={formData.date}
               onChange={handleChange}
-              className="pl-8 md:pl-12 h-11 md:h-12 text-xs md:text-sm"
+              className="pl-10 md:pl-12 h-11 md:h-12"
               required
             />
           </div>
           <div className="relative">
-            <Clock className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={14} />
+            <Clock className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
             <Input
               name="time"
               type="time"
               value={formData.time}
               onChange={handleChange}
-              className="pl-8 md:pl-12 h-11 md:h-12 text-xs md:text-sm"
+              className="pl-10 md:pl-12 h-11 md:h-12"
               required
             />
           </div>
           <div className="relative">
-            <Users className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={14} />
+            <Users className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
             <Input
               name="guests"
               type="number"
@@ -185,7 +185,7 @@ const ReservationForm = ({ serviceType = "restaurant" }: ReservationFormProps) =
               max="100"
               value={formData.guests}
               onChange={handleChange}
-              className="pl-8 md:pl-12 h-11 md:h-12 text-xs md:text-sm"
+              className="pl-10 md:pl-12 h-11 md:h-12"
               required
             />
           </div>
