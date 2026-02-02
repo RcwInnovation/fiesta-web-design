@@ -48,11 +48,16 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground text-base md:text-lg mb-1">Address</h3>
-                    <p className="text-muted-foreground text-sm md:text-base">
+                    <a 
+                      href="https://www.google.com/maps/search/?api=1&query=3231+17+Ave+SE,+Calgary,+AB+T2A+0P9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base block"
+                    >
                       3231 17 Ave SE<br />
                       Calgary, AB T2A 0P9<br />
                       Canada
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -74,8 +79,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground text-base md:text-lg mb-1">Email</h3>
-                    <a href="mailto:rcwluna@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">
-                      rcwluna@gmail.com
+                    <a href="mailto:theburritomexicanfood@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">
+                      theburritomexicanfood@gmail.com
                     </a>
                   </div>
                 </div>
@@ -87,7 +92,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground text-base md:text-lg mb-1">Hours</h3>
                     <div className="text-muted-foreground space-y-1 text-sm md:text-base">
-                      <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
+                      <p>Monday - Tuesday: 11:00 AM - 10:00 PM</p>
+                      <p className="text-primary font-medium">Wednesday: Closed</p>
+                      <p>Thursday: 11:00 AM - 10:00 PM</p>
                       <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
                       <p>Sunday: 12:00 PM - 9:00 PM</p>
                     </div>
