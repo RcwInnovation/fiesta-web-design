@@ -99,23 +99,23 @@ const Header = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-card/98 backdrop-blur-lg border-t border-border animate-slide-up">
-            <nav className="container-custom py-4 flex flex-col gap-2">
+          <div className="lg:hidden bg-card backdrop-blur-lg border-t border-border animate-slide-up shadow-lg">
+            <nav className="container-custom py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-medium py-3 px-2 rounded-lg transition-colors ${
+                  className={`font-medium py-3 px-4 rounded-lg transition-colors ${
                     location.pathname === link.path
-                      ? "text-primary bg-primary/10"
-                      : "text-foreground"
+                      ? "text-primary-foreground bg-primary"
+                      : "text-foreground hover:bg-muted"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Button variant="hero" size="lg" className="w-full mt-4" onClick={handleCtaClick}>
+              <Button variant="default" size="lg" className="w-full mt-4" onClick={handleCtaClick}>
                 {cta.text}
               </Button>
             </nav>
