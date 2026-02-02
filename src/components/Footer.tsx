@@ -103,10 +103,15 @@ const Footer = () => {
             <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-secondary mt-1 flex-shrink-0" />
-                <span className="text-background/80 text-sm md:text-base">
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=3231+17+Ave+SE,+Calgary,+AB+T2A+0P9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-background/80 hover:text-secondary text-sm md:text-base transition-colors"
+                >
                   3231 17 Ave SE<br />
                   Calgary, AB T2A 0P9
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-secondary flex-shrink-0" />
@@ -116,8 +121,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-secondary flex-shrink-0" />
-                <a href="mailto:rcwluna@gmail.com" className="text-background/80 hover:text-secondary text-sm md:text-base">
-                  rcwluna@gmail.com
+                <a href="mailto:theburritomexicanfood@gmail.com" className="text-background/80 hover:text-secondary text-sm md:text-base">
+                  theburritomexicanfood@gmail.com
                 </a>
               </li>
             </ul>
@@ -130,7 +135,9 @@ const Footer = () => {
                 <Clock size={18} className="text-secondary mt-1 flex-shrink-0" />
                 <div className="text-background/80 text-sm md:text-base">
                   <p className="font-medium text-background">Restaurant</p>
-                  <p>Mon - Thu: 11am - 10pm</p>
+                  <p>Mon - Tue: 11am - 10pm</p>
+                  <p className="text-secondary/80">Wed: Closed</p>
+                  <p>Thu: 11am - 10pm</p>
                   <p>Fri - Sat: 11am - 11pm</p>
                   <p>Sun: 12pm - 9pm</p>
                 </div>
@@ -151,12 +158,12 @@ const Footer = () => {
               <Link to="/terms" className="hover:text-secondary">Terms</Link>
             </div>
             <a
-              href="https://rcwinnovation.com/"
+              href="https://www.rcwinnovation.com"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="hover:text-secondary transition-colors"
             >
-              Created by Rcw Innovation Inc
+              Website developed by RCW Innovation
             </a>
           </div>
         </div>
