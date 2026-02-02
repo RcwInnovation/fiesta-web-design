@@ -1,70 +1,30 @@
-# Welcome to your Lovable project
+# 🌯 The Burrito Mexican Food
 
-## Project info
+Bienvenido al repositorio oficial de la presencia digital de **The Burrito Mexican Food**. Aquí gestionamos nuestra plataforma web para ofrecer la mejor experiencia visual de nuestros platillos mexicanos.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 📋 Sobre el Proyecto
+Esta es una aplicación web moderna diseñada para mostrar nuestro menú, ubicación y facilitar el contacto con nuestros clientes. Construida con un enfoque en velocidad y diseño responsivo.
 
-## How can I edit this code?
+## 🚀 Tecnologías Utilizadas
+Para mantener esta página volando (como nuestros burritos), utilizamos:
+* **React + TypeScript** (Interfaz de usuario)
+* **Tailwind CSS** (Estilizado moderno)
+* **Lucide React** (Iconografía)
+* **Vite** (Compilación ultra rápida)
 
-There are several ways of editing your application.
+## 🛠️ Desarrollo Local
+Si necesitas realizar cambios técnicos en el código:
 
-**Use Lovable**
+1.  **Clonar el repo:** `git clone <URL_DEL_REPO>`
+2.  **Instalar dependencias:** `npm install`
+3.  **Correr en local:** `npm run dev`
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🌯 Contacto y Ubicación
+Si eres parte del equipo y necesitas actualizar información del menú o promociones, por favor contacta al administrador del sistema o realiza un Pull Request directamente en la rama principal.
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
+> "El sabor auténtico de México en cada bocado."
 
 Yes, you can!
 
