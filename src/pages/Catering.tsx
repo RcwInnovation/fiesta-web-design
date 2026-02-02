@@ -9,9 +9,8 @@ import ReservationForm from "@/components/ReservationForm";
 import ReservationModal from "@/components/ReservationModal";
 import ImageSlider from "@/components/ImageSlider";
 import catering from "@/assets/catering.jpg";
-import heroTacos from "@/assets/hero-tacos.jpg";
-import restaurant1 from "@/assets/restaurant-1.jpg";
-import foodTruck1 from "@/assets/food-truck-1.jpg";
+import cateringEvent1 from "@/assets/catering-event-1.jpg";
+import cateringEvent2 from "@/assets/catering-event-2.jpg";
 
 const eventTypes = [
   { icon: Building, title: "Corporate Events", description: "Meetings, conferences, executive lunches and company celebrations" },
@@ -42,7 +41,7 @@ const packages = [
   },
 ];
 
-const cateringImages = [catering, heroTacos, foodTruck1];
+const cateringImages = [catering, cateringEvent1, cateringEvent2];
 
 const Catering = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
