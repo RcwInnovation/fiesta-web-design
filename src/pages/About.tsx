@@ -5,15 +5,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ImageSlider from "@/components/ImageSlider";
-import restaurant from "@/assets/restaurant.jpg";
-import heroTacos from "@/assets/hero-tacos.jpg";
-import catering from "@/assets/catering.jpg";
+import restaurant1 from "@/assets/restaurant-1.jpg";
+import restaurant2 from "@/assets/restaurant-2.jpg";
+import restaurant3 from "@/assets/restaurant-3.jpg";
+import restaurant4 from "@/assets/restaurant-4.jpg";
+import foodTruck1 from "@/assets/food-truck-1.jpg";
+import foodTruck2 from "@/assets/food-truck-2.jpg";
 import logo from "@/assets/logo.png";
 
 const stats = [
   { icon: Users, value: "10,000+", label: "Happy Customers" },
   { icon: Star, value: "4.9", label: "Average Rating" },
-  { icon: Award, value: "8+", label: "Years of Experience" },
+  { icon: Award, value: "5+", label: "Years of Experience" },
   { icon: Heart, value: "100%", label: "Mexican Passion" },
 ];
 
@@ -36,7 +39,8 @@ const values = [
   },
 ];
 
-const aboutImages = [restaurant, heroTacos, catering];
+const aboutImages = [restaurant1, restaurant2, restaurant3];
+const journeyImages = [foodTruck1, foodTruck2, restaurant4];
 
 const About = () => {
   return (
@@ -47,7 +51,7 @@ const About = () => {
       <section className="relative h-[40vh] md:h-[50vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${restaurant})` }}
+          style={{ backgroundImage: `url(${restaurant1})` }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="container-custom relative z-10 text-center">
@@ -67,23 +71,34 @@ const About = () => {
             <div>
               <img src={logo} alt="The Burrito" className="w-48 md:w-64 mb-6 md:mb-8" />
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 md:mb-6">
-                From the Heart of Mexico to Calgary
+                Every Great Journey Begins with Family
               </h2>
               <div className="space-y-4 text-muted-foreground text-sm md:text-base">
                 <p>
-                  The Burrito was born in 2015 with a simple dream: to bring authentic Mexican flavors 
-                  to the streets of Calgary. What started as a small food truck has become 
-                  a benchmark for Mexican cuisine in the city.
+                  More than five years ago, as a family with a dream, we started this journey with a food truck, 
+                  a deep passion for authentic Mexican cuisine, and the desire to share flavors that truly feel like home.
                 </p>
                 <p>
-                  Our founder, originally from Guadalajara, brought with him his grandmother's recipes 
-                  and a passion for sharing Mexico's rich culinary culture. Every taco, burrito 
-                  and quesadilla is a tribute to those roots.
+                  We chose to begin as a food truck to introduce our food to the community, understand the market, 
+                  and connect directly with our customers. From day one, our commitment was clear: to serve homemade-style food, 
+                  the kind of flavor many people miss when living far from home.
                 </p>
                 <p>
-                  Today, with our restaurant, food truck and catering service, we remain 
-                  committed to the same mission: offering delicious, fresh and authentic food 
-                  to everyone seeking a taste of Mexico.
+                  We are Cinthya and Ulises, originally from Sinaloa and Morelos. Our kitchen reflects our roots. 
+                  Some of our dishes honor the traditional style of Sinaloa, others represent the essence of Morelos, 
+                  and many are born from the fusion of both regions—creating a unique and authentic culinary experience.
+                </p>
+                <p>
+                  Through the support of our community, the quality of our food, and the warm, personal service that defines us, 
+                  we continued to grow. We proudly participated in numerous Latino and Canadian cultural events, 
+                  leading us to one of our biggest milestones: opening our physical restaurant in Calgary, Canada.
+                </p>
+                <p className="font-semibold text-foreground">
+                  Today, we are still a family cooking for families—driven by the same love, dedication, 
+                  and pride that inspired us from the very beginning.
+                </p>
+                <p className="text-primary font-display text-lg">
+                  Come taste the tradition. Experience real Mexican flavor in Calgary.
                 </p>
               </div>
             </div>
@@ -104,25 +119,42 @@ const About = () => {
         </div>
       </section>
 
-      {/* Gallery Slider */}
+      {/* Gallery Slider - Restaurant */}
       <section className="py-12 md:py-16 bg-corn-light">
         <div className="container-custom">
           <div className="text-center mb-8 md:mb-12">
             <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
-              Gallery
+              Our Restaurant
             </span>
             <h2 className="font-display text-3xl md:text-5xl text-foreground mt-2">
-              Our Journey
+              A Warm & Authentic Space
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <ImageSlider images={aboutImages} alt="About The Burrito" />
+            <ImageSlider images={aboutImages} alt="About The Burrito Restaurant" />
+          </div>
+        </div>
+      </section>
+
+      {/* Journey Slider - Food Truck */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container-custom">
+          <div className="text-center mb-8 md:mb-12">
+            <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+              Our Journey
+            </span>
+            <h2 className="font-display text-3xl md:text-5xl text-foreground mt-2">
+              From Food Truck to Restaurant
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <ImageSlider images={journeyImages} alt="The Burrito Food Truck Journey" />
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-12 md:py-20 bg-background">
+      <section className="py-12 md:py-20 bg-corn-light">
         <div className="container-custom">
           <div className="text-center mb-10 md:mb-14">
             <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">

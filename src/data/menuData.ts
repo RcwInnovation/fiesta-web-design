@@ -1,16 +1,19 @@
 // Menu item images
 import tacosPastor from "@/assets/menu/tacos-pastor.jpg";
 import tacosCarnitas from "@/assets/menu/tacos-carnitas.jpg";
-import tacosPollo from "@/assets/menu/tacos-pollo.jpg";
+import quesabirria from "@/assets/menu/quesabirria.jpg";
 import burrito from "@/assets/menu/burrito.jpg";
 import burritoBowl from "@/assets/menu/burrito-bowl.jpg";
 import quesadilla from "@/assets/menu/quesadilla.jpg";
-import guacamole from "@/assets/menu/guacamole.jpg";
 import nachos from "@/assets/menu/nachos.jpg";
 import elote from "@/assets/menu/elote.jpg";
+import guacamole from "@/assets/menu/guacamole.jpg";
 import horchata from "@/assets/menu/horchata.jpg";
 import jamaica from "@/assets/menu/jamaica.jpg";
 import margarita from "@/assets/menu/margarita.jpg";
+import torta from "@/assets/menu/torta.jpg";
+import tresLeches from "@/assets/menu/tres-leches.jpg";
+import churros from "@/assets/menu/churros.jpg";
 
 export interface MenuItem {
   name: string;
@@ -41,7 +44,7 @@ export const foodTruckMenu: MenuCategory[] = [
     name: "🫔 Specialty",
     description: "Our signature dish",
     items: [
-      { name: "Quesa-Birria", price: "$19.95", description: "3 fried tortillas with mozzarella cheese, birria, cilantro and onion. Consomé included", image: tacosCarnitas },
+      { name: "Quesa-Birria", price: "$19.95", description: "3 fried tortillas with mozzarella cheese, birria, cilantro and onion. Consomé included", image: quesabirria },
     ],
   },
   {
@@ -58,7 +61,7 @@ export const foodTruckMenu: MenuCategory[] = [
     name: "🥪 Tortas",
     description: "Mexican sandwiches",
     items: [
-      { name: "Torta", price: "$18.90", description: "Homemade bread with mayo, beans, protein, lettuce, tomato, avocado and cream", image: quesadilla },
+      { name: "Torta", price: "$18.90", description: "Homemade bread with mayo, beans, protein, lettuce, tomato, avocado and cream", image: torta },
     ],
   },
   {
@@ -101,8 +104,8 @@ export const foodTruckMenu: MenuCategory[] = [
     name: "🍰 Desserts",
     description: "Sweet treats to end your meal",
     items: [
-      { name: "Tres Leches Cake", price: "$8.00", description: "Moist sponge cake soaked in three types of milk", image: guacamole },
-      { name: "Churros", price: "$6.00", description: "Fried dough pastry with cinnamon sugar", image: guacamole },
+      { name: "Tres Leches Cake", price: "$8.00", description: "Moist sponge cake soaked in three types of milk", image: tresLeches },
+      { name: "Churros", price: "$6.00", description: "Fried dough pastry with cinnamon sugar", image: churros },
     ],
   },
 ];
@@ -125,10 +128,10 @@ export const restaurantMenu: MenuCategory[] = [
     name: "👶 Kids Menu",
     description: "For the little ones in the family",
     items: [
-      { name: "Canadian Combito", price: "$5.25", description: "2 pancakes with butter, syrup and 2 bacon strips", image: quesadilla },
+      { name: "Canadian Combito", price: "$5.25", description: "2 pancakes with butter, syrup and 2 bacon strips", image: tresLeches },
       { name: "Cheese Quesadilla", price: "$8.40", description: "Flour tortilla with mozzarella cheese and french fries", image: quesadilla },
-      { name: "Cheese Burger", price: "$8.40", description: "Burger with american cheese and french fries", image: burrito },
-      { name: "Chicken Strips", price: "$8.40", description: "Breaded chicken strips with french fries", image: tacosPollo },
+      { name: "Cheese Burger", price: "$8.40", description: "Burger with american cheese and french fries", image: torta },
+      { name: "Chicken Strips", price: "$8.40", description: "Breaded chicken strips with french fries", image: quesadilla },
     ],
   },
   {
@@ -139,10 +142,10 @@ export const restaurantMenu: MenuCategory[] = [
       { name: "Tacos (3)", price: "$17.85", description: "3 soft tortillas with your favorite filling, cilantro and onion", image: tacosPastor },
       { name: "Burrito", price: "$16.80", description: "Large flour tortilla with rice, beans, protein and toppings", image: burrito },
       { name: "Burrito Bowl", price: "$16.80", description: "Everything from the burrito but in a bowl, no tortilla", image: burritoBowl },
-      { name: "Torta", price: "$18.90", description: "Homemade bread with mayo, beans, protein, lettuce, tomato, avocado and cream", image: quesadilla },
+      { name: "Torta", price: "$18.90", description: "Homemade bread with mayo, beans, protein, lettuce, tomato, avocado and cream", image: torta },
       { name: "Nachos", price: "$18.90", description: "Chips with beans, protein, melted cheese, pico de gallo and cream", image: nachos },
       { name: "Quesadilla", price: "$16.80", description: "Large tortilla with melted cheese and your favorite protein", image: quesadilla },
-      { name: "Quesabirria", price: "$19.95", description: "3 fried tortillas with mozzarella cheese, birria, cilantro and onion. Consomé included", image: tacosCarnitas },
+      { name: "Quesabirria", price: "$19.95", description: "3 fried tortillas with mozzarella cheese, birria, cilantro and onion. Consomé included", image: quesabirria },
     ],
   },
   {
@@ -152,9 +155,9 @@ export const restaurantMenu: MenuCategory[] = [
     items: [
       { name: "Carnitas", price: "", description: "Pulled pork, slow-cooked to perfection", image: tacosCarnitas },
       { name: "Cochinita", price: "", description: "Pork in achiote adobo, Yucatan style", image: tacosPastor },
-      { name: "Birria", price: "", description: "Tender beef in guajillo sauce", image: tacosCarnitas },
-      { name: "Steak", price: "", description: "Seasoned grilled beef", image: tacosPollo },
-      { name: "Tinga", price: "", description: "Shredded chicken in tomato and dry peppers sauce", image: tacosPollo },
+      { name: "Birria", price: "", description: "Tender beef in guajillo sauce", image: quesabirria },
+      { name: "Steak", price: "", description: "Seasoned grilled beef", image: tacosCarnitas },
+      { name: "Tinga", price: "", description: "Shredded chicken in tomato and dry peppers sauce", image: tacosPastor },
       { name: "Vegetarian", price: "", description: "Stew of zucchini, corn, tomato and onion", image: elote },
     ],
   },
@@ -182,10 +185,10 @@ export const restaurantMenu: MenuCategory[] = [
     name: "🍲 Soups",
     description: "Hearty traditional Mexican soups",
     items: [
-      { name: "Birria", price: "$21.00", description: "Shredded beef in dried chili and aromatic spice broth", image: tacosCarnitas },
+      { name: "Birria", price: "$21.00", description: "Shredded beef in dried chili and aromatic spice broth", image: quesabirria },
       { name: "Seafood Soup", price: "$24.00", description: "Mixed seafood in a rich tomato broth with vegetables", image: guacamole },
       { name: "Beef Soup", price: "$18.00", description: "Traditional beef soup with vegetables and hominy", image: tacosCarnitas },
-      { name: "Chicken Soup", price: "$16.00", description: "Classic chicken soup with vegetables and rice", image: tacosPollo },
+      { name: "Chicken Soup", price: "$16.00", description: "Classic chicken soup with vegetables and rice", image: tacosPastor },
     ],
   },
   {
@@ -193,7 +196,7 @@ export const restaurantMenu: MenuCategory[] = [
     name: "🍔 Hamburger",
     description: "American classic with a Mexican twist",
     items: [
-      { name: "Hamburger", price: "$14.00", description: "Beef patty with lettuce, tomato, onion, pickles and special sauce. Served with fries", image: burrito },
+      { name: "Hamburger", price: "$14.00", description: "Beef patty with lettuce, tomato, onion, pickles and special sauce. Served with fries", image: torta },
     ],
   },
   {
@@ -201,8 +204,8 @@ export const restaurantMenu: MenuCategory[] = [
     name: "🥘 Molcajetes",
     description: "Served in a traditional volcanic stone mortar",
     items: [
-      { name: "Traditional Molcajete", price: "$28.00", description: "Choose your protein: Steak, Pork in adobo, or Chicken. Served with grilled cactus, onions, and cheese", image: tacosCarnitas },
-      { name: "Molcajete Mixto", price: "$35.00", description: "Combination of Steak, Chicken, and Shrimp with grilled vegetables", image: tacosCarnitas },
+      { name: "Traditional Molcajete", price: "$28.00", description: "Choose your protein: Steak, Pork in adobo, or Chicken. Served with grilled cactus, onions, and cheese", image: guacamole },
+      { name: "Molcajete Mixto", price: "$35.00", description: "Combination of Steak, Chicken, and Shrimp with grilled vegetables", image: guacamole },
     ],
   },
   {
@@ -210,9 +213,9 @@ export const restaurantMenu: MenuCategory[] = [
     name: "🍰 Desserts",
     description: "Sweet endings to your meal",
     items: [
-      { name: "Tres Leches Cake", price: "$8.00", description: "Moist sponge cake soaked in three types of milk", image: guacamole },
-      { name: "Flan", price: "$7.00", description: "Traditional Mexican caramel custard", image: guacamole },
-      { name: "Churros", price: "$6.00", description: "Fried dough pastry with cinnamon sugar and chocolate sauce", image: guacamole },
+      { name: "Tres Leches Cake", price: "$8.00", description: "Moist sponge cake soaked in three types of milk", image: tresLeches },
+      { name: "Flan", price: "$7.00", description: "Traditional Mexican caramel custard", image: tresLeches },
+      { name: "Churros", price: "$6.00", description: "Fried dough pastry with cinnamon sugar and chocolate sauce", image: churros },
       { name: "Esquites", price: "$8.00", description: "Mexican corn in a cup with mayo, cotija cheese, lime and chili", image: elote },
       { name: "Dori-Esquites", price: "$10.00", description: "Esquites served in a Doritos bag", image: elote },
     ],
